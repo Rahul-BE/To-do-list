@@ -1,0 +1,170 @@
+.task-container {
+  width: 100%;
+}
+
+.add-task-section {
+  margin-bottom: 24px;
+}
+
+.add-task-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.task-input:focus {
+  border-color: #646cff;
+}
+
+.create-btn {
+  padding: 12px 20px;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.create-btn:hover {
+  background-color: #747bff;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 24px 0;
+}
+
+.tasks-section {
+  margin-bottom: 24px;
+}
+
+.tasks-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.empty-message {
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  padding: 16px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #646cff;
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  background-color: #e9ecef;
+  transform: translateX(2px);
+}
+
+.task-item.completed {
+  border-left-color: #286aa7;
+  opacity: 0.7;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #646cff;
+}
+
+.task-text {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  word-break: break-word;
+  flex: 1;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #dc3545;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .create-btn {
+    width: 100%;
+  }
+  
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .task-content {
+    width: 100%;
+  }
+  
+  .delete-btn {
+    align-self: flex-end;
+  }
+}
